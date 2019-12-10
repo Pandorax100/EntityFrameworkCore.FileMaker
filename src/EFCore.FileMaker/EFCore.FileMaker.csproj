@@ -8,7 +8,7 @@
     <AssemblyName>Pandorax.EntityFrameworkCore.FileMaker</AssemblyName>
     <RootNamespace>Pandorax.EntityFrameworkCore.FileMaker</RootNamespace>
     <PackageId>Pandorax.EntityFrameworkCore.FileMaker</PackageId>
-    <Version>1.0.0-alpha002</Version>
+    <Version>1.0.0-alpha003</Version>
     <Authors>Liam</Authors>
     <Product>Pandorax.EntityFrameworkCore.FileMaker</Product>
     <Description>FileMaker Provider for Entity Framework Core</Description>

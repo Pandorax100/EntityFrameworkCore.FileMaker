@@ -1,11 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Query;
+using Microsoft.EntityFrameworkCore.Metadata.Conventions.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.EntityFrameworkCore.Update;
 using Microsoft.Extensions.DependencyInjection;
 using Pandorax.EntityFrameworkCore.FileMaker.Diagnostics.Internal;
 using Pandorax.EntityFrameworkCore.FileMaker.Infrastructure.Internal;
+using Pandorax.EntityFrameworkCore.FileMaker.Metadata.Conventions;
 using Pandorax.EntityFrameworkCore.FileMaker.Storage.Internal;
 
 namespace Pandorax.EntityFrameworkCore.FileMaker.Extensions
@@ -26,6 +27,7 @@ namespace Pandorax.EntityFrameworkCore.FileMaker.Extensions
                 .TryAdd<ISqlGenerationHelper, FileMakerSqlGenerationHelper>()
                 .TryAdd<IModificationCommandBatchFactory, FileMakerModificationCommandBatchFactory>()
                 .TryAdd<IUpdateSqlGenerator, FileMakerUpdateSqlGenerator>()
+                .TryAdd<IProviderConventionSetBuilder, FileMakerConventionSetBuilder>()
                 .TryAdd<IRelationalConnection, FileMakerConnection>();
 
             builder.TryAddCoreServices();

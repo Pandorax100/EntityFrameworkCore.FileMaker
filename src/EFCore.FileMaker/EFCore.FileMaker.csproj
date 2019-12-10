@@ -7,6 +7,15 @@
     <CodeAnalysisRuleSet>..\..\FileMakerProvider.ruleset</CodeAnalysisRuleSet>
     <AssemblyName>Pandorax.EntityFrameworkCore.FileMaker</AssemblyName>
     <RootNamespace>Pandorax.EntityFrameworkCore.FileMaker</RootNamespace>
+    <PackageId>Pandorax.EntityFrameworkCore.FileMaker</PackageId>
+    <Version>1.0.0-alpha001</Version>
+    <Authors>Liam</Authors>
+    <Product>Pandorax.EntityFrameworkCore.FileMaker</Product>
+    <Description>FileMaker Provider for Entity Framework Core</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/Pandorax100/EntityFrameworkCore.FileMaker</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Pandorax100/EntityFrameworkCore.FileMaker</RepositoryUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>

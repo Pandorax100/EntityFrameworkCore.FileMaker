@@ -6,13 +6,6 @@ namespace Pandorax.EntityFrameworkCore.FileMaker.Storage.Internal
 {
     public class FileMakerTypeMappingSource : RelationalTypeMappingSource
     {
-        public FileMakerTypeMappingSource(
-            TypeMappingSourceDependencies dependencies,
-            RelationalTypeMappingSourceDependencies relationalDependencies)
-            : base(dependencies, relationalDependencies)
-        {
-        }
-
         private readonly Dictionary<Type, RelationalTypeMapping> _clrTypeMappings
             = new Dictionary<Type, RelationalTypeMapping>
             {
@@ -28,6 +21,13 @@ namespace Pandorax.EntityFrameworkCore.FileMaker.Storage.Internal
                 ["decimal"] = new DoubleTypeMapping("decimal"),
                 ["double"] = new DoubleTypeMapping("double"),
             };
+
+        public FileMakerTypeMappingSource(
+            TypeMappingSourceDependencies dependencies,
+            RelationalTypeMappingSourceDependencies relationalDependencies)
+            : base(dependencies, relationalDependencies)
+        {
+        }
 
         protected override RelationalTypeMapping? FindMapping(in RelationalTypeMappingInfo mappingInfo)
         {

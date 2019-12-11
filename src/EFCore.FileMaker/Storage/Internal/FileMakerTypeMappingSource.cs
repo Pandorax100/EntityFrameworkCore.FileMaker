@@ -10,7 +10,7 @@ namespace Pandorax.EntityFrameworkCore.FileMaker.Storage.Internal
             = new Dictionary<Type, RelationalTypeMapping>
             {
                 [typeof(string)] = new StringTypeMapping("varchar"),
-                [typeof(int)] = new DoubleTypeMapping("decimal"),
+                [typeof(int)] = new IntTypeMapping("int"),
             };
 
         private readonly Dictionary<string, RelationalTypeMapping> _storeTypeMappings

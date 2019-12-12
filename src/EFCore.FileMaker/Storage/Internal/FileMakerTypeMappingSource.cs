@@ -9,8 +9,10 @@ namespace Pandorax.EntityFrameworkCore.FileMaker.Storage.Internal
         private readonly Dictionary<Type, RelationalTypeMapping> _clrTypeMappings
             = new Dictionary<Type, RelationalTypeMapping>
             {
-                [typeof(string)] = new StringTypeMapping("varchar"),
-                [typeof(int)] = new IntTypeMapping("int"),
+                [typeof(string)] = new StringTypeMapping("VARCHAR"),
+                [typeof(int)] = new IntTypeMapping("INT"),
+                [typeof(DateTime)] = new DateTimeTypeMapping("DATE"),
+                [typeof(double)] = new DoubleTypeMapping("DECIMAL"),
             };
 
         private readonly Dictionary<string, RelationalTypeMapping> _storeTypeMappings
